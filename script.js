@@ -20,7 +20,6 @@ document.querySelector(".check").addEventListener("click",function(){
     if (guess === secret_number){
         display_message("Correct answer...");
         display_score(score);
-        highscore = score;
         document.querySelector('.highscore').textContent = score;
         document.querySelector(".secret_number").textContent= `You guessed it right!!.The number is ${secret_number}`;
         if (score >= highscore){
@@ -47,8 +46,8 @@ document.querySelector(".check").addEventListener("click",function(){
 
 // play again 
 document.querySelector('.again').addEventListener('click',function(){
-    secret_number = Math.trunc(Math.random()*20)+1;
     score = 20;
+    secret_number = Math.trunc(Math.random()*20)+1;
     display_score(score);
     document.querySelector(".guess").value = '';
     display_message("Start Guessing");
