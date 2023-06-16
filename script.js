@@ -23,8 +23,13 @@ document.querySelector(".check").addEventListener("click",function(){
         highscore = score;
         document.querySelector('.highscore').textContent = score;
         document.querySelector(".secret_number").textContent= `You guessed it right!!.The number is ${secret_number}`;
-        if (score < highscore){
+        if (score >= highscore){
+            highscore = score;
             document.querySelector('.highscore').textContent = highscore
+        }
+        else if(score < highscore){
+            score = highscore;
+            document.querySelector('.highscore').textContent = score;
         }
     }
     else if (guess === 0){
