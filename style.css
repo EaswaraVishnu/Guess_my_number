@@ -1,4 +1,53 @@
 body{
+    background-color: #212A3E;
+    color: #F1F6F9;
     text-align: center;
+    font-family: 'Press Start 2P', cursive;
 }
+h1{
+    margin: 70px;
+    text-decoration: underline;
+}
+.message{
+    margin: 70px;
+}
+.secret_number{
+    line-height: 60px;
+    margin: 40px;
+}
+.guess{
+    font-size: 40px;
+    border: 2px solid #9BA4B5;
+    background: #9BA4B5;
+    border-radius: 10px;
+    width: 80px;
+}
+p{
+    margin: 50px;
+    font-size: 30px;
+}
+.check,.again{
+    font-size: 18px;
+    min-width: 130px;
+    height: 40px;
+    color: black;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #9BA4B5;
+    background: #9BA4B5;
 
+}
+.check:hover {
+    background: #394867;
+    color: white
+  }
+.again:hover {
+    background: #394867;
+    color: white
+  }
