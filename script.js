@@ -1,4 +1,4 @@
-
+'use strict'
 let secret_number = Math.trunc(Math.random()*20)+1;
 let score = 20;
 let highscore = 0;
@@ -18,9 +18,9 @@ document.querySelector(".check").addEventListener("click",function(){
     let guess = Number(document.querySelector(".guess").value);
     
     if (guess === secret_number){
-        display_message("Correct answer...");
-        display_score(score);
-        document.querySelector(".secret_number").textContent= `You guessed it right!!.The number is ${secret_number}`;
+        display_message("You guessed it right!!"); //display win messgae
+        display_score(score);  // display current score
+        document.querySelector(".secret_number").textContent= `The number is ${secret_number}`;
         if (score > highscore){
             highscore = score;
             document.querySelector('.highscore').textContent = highscore;
@@ -30,8 +30,8 @@ document.querySelector(".check").addEventListener("click",function(){
         display_message("Enter a value....");
     }
     else{
-        score -= 1;
-        guess > secret_number ? display_message("too high") : display_message("too low")
+        score --;
+        guess > secret_number ? display_message("Too high") : display_message("Too low")
         display_score(score);
         if (score === 0){
             document.querySelector(".check").disabled = true;
